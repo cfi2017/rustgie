@@ -105,14 +105,6 @@ impl RustgieClient {
                 {
                     builder = builder.deflate(true);
                 }
-                #[cfg(feature = "gzip")]
-                {
-                    builder = builder.gzip(true);
-                }
-                #[cfg(feature = "cookies")]
-                {
-                    builder = builder.cookie_store(true);
-                }
 
                 builder = builder
                     .default_headers(default_headers);
